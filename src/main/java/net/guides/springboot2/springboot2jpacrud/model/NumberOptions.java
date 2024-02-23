@@ -1,0 +1,78 @@
+package net.guides.springboot2.springboot2jpacrud.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "numberOptions")
+public class NumberOptions {
+    private long id;
+    private int min;
+    private int max;
+    private int nb;
+    private boolean noRepeat;
+    private boolean sort;
+
+    public NumberOptions(){}
+
+    public NumberOptions(int min, int max, int nb, boolean noRepeat, boolean sort) {
+        this.min = min;
+        this.max = max;
+        this.nb = nb;
+        this.noRepeat = noRepeat;
+        this.sort = sort;
+    }
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public long getId() {
+        return id;
+    }
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Column(name = "min", nullable = false)
+    public int getMin() {
+        return min;
+    }
+    public void setMin(int min) {
+        this.min = min;
+    }
+
+    @Column(name = "max", nullable = false)
+    public int getMax() {
+        return max;
+    }
+    public void setMax(int max) {
+        this.max = max;
+    }
+
+    @Column(name = "nb", nullable = false)
+    public int getNb() {
+        return nb;
+    }
+    public void setNb(int nb) {
+        this.nb = nb;
+    }
+
+    @Column(name = "noRepeat", nullable = false)
+    public boolean getNoRepeat() {
+        return noRepeat;
+    }
+    public void setNoRepeat(boolean noRepeat) {
+        this.noRepeat = noRepeat;
+    }
+
+    @Column(name = "sort", nullable = false)
+    public boolean getSort() {
+        return sort;
+    }
+    public void setSort(boolean sort) {
+        this.sort = sort;
+    }
+
+    @Override
+    public String toString() {
+        return "Number option [id=" + id + ", min=" + min + ", max=" + max + ", nb=" + nb + ", noRepeat=" + noRepeat + ", sort=" + sort + "]";
+    }
+}

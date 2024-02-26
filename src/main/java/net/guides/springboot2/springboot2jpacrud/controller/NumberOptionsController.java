@@ -19,7 +19,8 @@ import net.guides.springboot2.springboot2jpacrud.repository.NumberOptionsReposit
 import net.guides.springboot2.springboot2jpacrud.exception.ResourceNotFoundException;
 
 
-@RestController @CrossOrigin(origins = "http://localhost:4200")
+@RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/api/v1")
 public class NumberOptionsController {
     @Autowired

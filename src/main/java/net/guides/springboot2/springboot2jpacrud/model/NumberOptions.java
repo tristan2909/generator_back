@@ -3,18 +3,18 @@ package net.guides.springboot2.springboot2jpacrud.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "numberOptions")
+@Table(name = "number_options")
 public class NumberOptions {
     private long id;
     private int minC;
     private int maxC;
     private int nb;
-    private String noRepeat;
-    private String sort;
+    private int noRepeat;
+    private int sort;
 
     public NumberOptions(){}
 
-    public NumberOptions(int min, int max, int nb, String noRepeat, String sort) {
+    public NumberOptions(int min, int max, int nb, int noRepeat, int sort) {
         this.minC = min;
         this.maxC = max;
         this.nb = nb;
@@ -31,7 +31,7 @@ public class NumberOptions {
         this.id = id;
     }
 
-    @Column(name = "min", nullable = false)
+    @Column(name = "minC", nullable = false)
     public int getMin() {
         return minC;
     }
@@ -39,7 +39,7 @@ public class NumberOptions {
         this.minC = min;
     }
 
-    @Column(name = "max", nullable = false)
+    @Column(name = "maxC", nullable = false)
     public int getMax() {
         return maxC;
     }
@@ -56,18 +56,18 @@ public class NumberOptions {
     }
 
     @Column(name = "noRepeat", nullable = false)
-    public String getNoRepeat() {
+    public int getNoRepeat() {
         return noRepeat;
     }
-    public void setNoRepeat(String noRepeat) {
+    public void setNoRepeat(int noRepeat) {
         this.noRepeat = noRepeat;
     }
 
     @Column(name = "sort", nullable = false)
-    public String getSort() {
+    public int getSort() {
         return sort;
     }
-    public void setSort(String sort) {
+    public void setSort(int sort) {
         this.sort = sort;
     }
 

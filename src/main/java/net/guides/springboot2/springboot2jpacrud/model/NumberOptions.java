@@ -6,17 +6,17 @@ import jakarta.persistence.*;
 @Table(name = "numberOptions")
 public class NumberOptions {
     private long id;
-    private int min;
-    private int max;
+    private int minC;
+    private int maxC;
     private int nb;
-    private boolean noRepeat;
-    private boolean sort;
+    private String noRepeat;
+    private String sort;
 
     public NumberOptions(){}
 
-    public NumberOptions(int min, int max, int nb, boolean noRepeat, boolean sort) {
-        this.min = min;
-        this.max = max;
+    public NumberOptions(int min, int max, int nb, String noRepeat, String sort) {
+        this.minC = min;
+        this.maxC = max;
         this.nb = nb;
         this.noRepeat = noRepeat;
         this.sort = sort;
@@ -33,18 +33,18 @@ public class NumberOptions {
 
     @Column(name = "min", nullable = false)
     public int getMin() {
-        return min;
+        return minC;
     }
     public void setMin(int min) {
-        this.min = min;
+        this.minC = min;
     }
 
     @Column(name = "max", nullable = false)
     public int getMax() {
-        return max;
+        return maxC;
     }
     public void setMax(int max) {
-        this.max = max;
+        this.maxC = max;
     }
 
     @Column(name = "nb", nullable = false)
@@ -56,23 +56,23 @@ public class NumberOptions {
     }
 
     @Column(name = "noRepeat", nullable = false)
-    public boolean getNoRepeat() {
+    public String getNoRepeat() {
         return noRepeat;
     }
-    public void setNoRepeat(boolean noRepeat) {
+    public void setNoRepeat(String noRepeat) {
         this.noRepeat = noRepeat;
     }
 
     @Column(name = "sort", nullable = false)
-    public boolean getSort() {
+    public String getSort() {
         return sort;
     }
-    public void setSort(boolean sort) {
+    public void setSort(String sort) {
         this.sort = sort;
     }
 
     @Override
     public String toString() {
-        return "Number option [id=" + id + ", min=" + min + ", max=" + max + ", nb=" + nb + ", noRepeat=" + noRepeat + ", sort=" + sort + "]";
+        return "Number option [id=" + id + ", min=" + minC + ", max=" + maxC + ", nb=" + nb + ", noRepeat=" + noRepeat + ", sort=" + sort + "]";
     }
 }

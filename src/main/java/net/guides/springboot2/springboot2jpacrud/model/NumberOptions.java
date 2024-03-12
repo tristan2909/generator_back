@@ -70,9 +70,4 @@ public class NumberOptions {
     public void setSort(int sort) {
         this.sort = sort;
     }
-
-    @Override
-    public String toString() {
-        return "Number option [id=" + id + ", min=" + minC + ", max=" + maxC + ", nb=" + nb + ", noRepeat=" + noRepeat + ", sort=" + sort + "]";
-    }
 }

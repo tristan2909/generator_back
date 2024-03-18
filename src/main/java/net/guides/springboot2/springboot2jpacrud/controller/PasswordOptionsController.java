@@ -38,7 +38,7 @@ public class PasswordOptionsController {
 
         passwordOptions.setNoRepeat(passwordOptionsDetail.getNoRepeat());
         passwordOptions.setLengthC(passwordOptionsDetail.getLengthC());
-        passwordOptions.setUseDigit(passwordOptionsDetail.getUseDigit());
+        passwordOptions.setUseDigits(passwordOptionsDetail.getUseDigits());
         passwordOptions.setUseSpecChars(passwordOptionsDetail.getUseSpecChars());
         passwordOptions.setOnlyDigits(passwordOptionsDetail.getOnlyDigits());
         passwordOptions.setOnlyHexa(passwordOptionsDetail.getOnlyHexa());

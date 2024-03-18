@@ -21,13 +21,13 @@ CREATE TABLE IF NOT EXISTS password_options (
     id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     no_repeat INT(9),
     lengthC INT (9),
-    use_digit INT(9),
+    use_digits INT(9),
     use_spec_chars INT(9),
     only_digits INT(9),
     only_hexa INT(9)
 );
 
-INSERT INTO password_options(no_repeat, lengthC, use_digit, use_spec_chars, only_digits, only_hexa) VALUES (1, 5, 1, 1, 1, 1);
+INSERT INTO password_options(no_repeat, lengthC, use_digits, use_spec_chars, only_digits, only_hexa) VALUES (1, 5, 1, 1, 1, 1);
 
 SELECT * FROM password_options;
 

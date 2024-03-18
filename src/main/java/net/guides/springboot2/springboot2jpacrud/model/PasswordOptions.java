@@ -8,17 +8,17 @@ public class PasswordOptions {
     private long id;
     private int noRepeat;
     private int lengthC;
-    private int useDigit;
+    private int useDigits;
     private int useSpecChars;
     private int onlyDigits;
     private int onlyHexa;
 
     public PasswordOptions(){}
 
-    public PasswordOptions(int noRepeat, int lengthC, int useDigit, int useSpecChars, int onlyDigits, int onlyHexa) {
+    public PasswordOptions(int noRepeat, int lengthC, int useDigits, int useSpecChars, int onlyDigits, int onlyHexa) {
         this.noRepeat = noRepeat;
         this.lengthC = lengthC;
-        this.useDigit = useDigit;
+        this.useDigits = useDigits;
         this.useSpecChars = useSpecChars;
         this.onlyDigits = onlyDigits;
         this.onlyHexa = onlyHexa;
@@ -49,12 +49,12 @@ public class PasswordOptions {
         this.lengthC = lengthC;
     }
 
-    @Column(name = "useDigit", nullable = false)
-    public int getUseDigit() {
-        return useDigit;
+    @Column(name = "useDigits", nullable = false)
+    public int getUseDigits() {
+        return useDigits;
     }
-    public void setUseDigit(int useDigit) {
-        this.useDigit = useDigit;
+    public void setUseDigits(int useDigits) {
+        this.useDigits = useDigits;
     }
 
     @Column(name = "useSpecChars", nullable = false)

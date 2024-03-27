@@ -6,16 +6,16 @@ import jakarta.persistence.*;
 @Table(name = "password_options")
 public class PasswordOptions {
     private long id;
-    private int noRepeat;
+    private boolean noRepeat;
     private int lengthC;
-    private int useDigits;
-    private int useSpecChars;
-    private int onlyDigits;
-    private int onlyHexa;
+    private boolean useDigits;
+    private boolean useSpecChars;
+    private boolean onlyDigits;
+    private boolean onlyHexa;
 
     public PasswordOptions(){}
 
-    public PasswordOptions(int noRepeat, int lengthC, int useDigits, int useSpecChars, int onlyDigits, int onlyHexa) {
+    public PasswordOptions(boolean noRepeat, int lengthC, boolean useDigits, boolean useSpecChars, boolean onlyDigits, boolean onlyHexa) {
         this.noRepeat = noRepeat;
         this.lengthC = lengthC;
         this.useDigits = useDigits;
@@ -34,10 +34,10 @@ public class PasswordOptions {
     }
 
     @Column(name = "noRepeat", nullable = false)
-    public int getNoRepeat() {
+    public boolean getNoRepeat() {
         return noRepeat;
     }
-    public void setNoRepeat(int noRepeat) {
+    public void setNoRepeat(boolean noRepeat) {
         this.noRepeat = noRepeat;
     }
 
@@ -50,34 +50,34 @@ public class PasswordOptions {
     }
 
     @Column(name = "useDigits", nullable = false)
-    public int getUseDigits() {
+    public boolean getUseDigits() {
         return useDigits;
     }
-    public void setUseDigits(int useDigits) {
+    public void setUseDigits(boolean useDigits) {
         this.useDigits = useDigits;
     }
 
     @Column(name = "useSpecChars", nullable = false)
-    public int getUseSpecChars() {
+    public boolean getUseSpecChars() {
         return useSpecChars;
     }
-    public void setUseSpecChars(int useSpecChars) {
+    public void setUseSpecChars(boolean useSpecChars) {
         this.useSpecChars = useSpecChars;
     }
 
     @Column(name = "onlyDigits", nullable = false)
-    public int getOnlyDigits() {
+    public boolean getOnlyDigits() {
         return onlyDigits;
     }
-    public void setOnlyDigits(int onlyDigits) {
+    public void setOnlyDigits(boolean onlyDigits) {
         this.onlyDigits = onlyDigits;
     }
     
     @Column(name = "onlyHexa", nullable = false)
-    public int getOnlyHexa() {
+    public boolean getOnlyHexa() {
         return onlyHexa;
     }
-    public void setOnlyHexa(int onlyHexa) {
+    public void setOnlyHexa(boolean onlyHexa) {
         this.onlyHexa = onlyHexa;
     }
 }

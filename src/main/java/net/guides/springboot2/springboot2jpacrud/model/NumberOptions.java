@@ -9,12 +9,12 @@ public class NumberOptions {
     private int minC;
     private int maxC;
     private int nb;
-    private int noRepeat;
-    private int sort;
+    private boolean noRepeat;
+    private boolean sort;
 
     public NumberOptions(){}
 
-    public NumberOptions(int min, int max, int nb, int noRepeat, int sort) {
+    public NumberOptions(int min, int max, int nb, boolean noRepeat, boolean sort) {
         this.minC = min;
         this.maxC = max;
         this.nb = nb;
@@ -56,18 +56,18 @@ public class NumberOptions {
     }
 
     @Column(name = "noRepeat", nullable = false)
-    public int getNoRepeat() {
+    public boolean getNoRepeat() {
         return noRepeat;
     }
-    public void setNoRepeat(int noRepeat) {
+    public void setNoRepeat(boolean noRepeat) {
         this.noRepeat = noRepeat;
     }
 
     @Column(name = "sort", nullable = false)
-    public int getSort() {
+    public boolean getSort() {
         return sort;
     }
-    public void setSort(int sort) {
+    public void setSort(boolean sort) {
         this.sort = sort;
     }
 }

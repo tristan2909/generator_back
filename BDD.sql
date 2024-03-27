@@ -5,11 +5,11 @@ CREATE TABLE IF NOT EXISTS number_options (
     minC INT(9),
     maxC INT(9),
     nb INT(9),
-    no_repeat INT(1),
-    sort INT(1)
+    no_repeat BOOLEAN,
+    sort BOOLEAN
 );
 
-INSERT INTO number_options(minC, maxC, nb, no_repeat, sort) VALUES (1, 5, 1, 1, 0);
+INSERT INTO number_options(minC, maxC, nb, no_repeat, sort) VALUES (1, 5, 1, TRUE, FALSE);
 
 SELECT * FROM number_options;
 
@@ -19,15 +19,15 @@ DROP TABLE IF EXISTS password_options;
 
 CREATE TABLE IF NOT EXISTS password_options (
     id BIGINT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    no_repeat INT(9),
-    lengthC INT (9),
-    use_digits INT(9),
-    use_spec_chars INT(9),
-    only_digits INT(9),
-    only_hexa INT(9)
+    no_repeat BOOLEAN,
+    lengthC INT(9),
+    use_digits BOOLEAN,
+    use_spec_chars BOOLEAN,
+    only_digits BOOLEAN,
+    only_hexa BOOLEAN
 );
 
-INSERT INTO password_options(no_repeat, lengthC, use_digits, use_spec_chars, only_digits, only_hexa) VALUES (1, 5, 1, 1, 1, 1);
+INSERT INTO password_options(no_repeat, lengthC, use_digits, use_spec_chars, only_digits, only_hexa) VALUES (TRUE, 5, TRUE, TRUE, TRUE, TRUE);
 
 SELECT * FROM password_options;
 
